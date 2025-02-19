@@ -1,5 +1,6 @@
 package uz.urinov.student;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
 public class StudentController {
     private final StudentService studentService;
 
-    public StudentController(StudentService studentService) {
+    public StudentController(@Qualifier("db") StudentService studentService) {
         this.studentService = studentService;
     }
 

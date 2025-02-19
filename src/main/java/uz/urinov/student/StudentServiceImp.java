@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service("im")
 public class StudentServiceImp implements StudentService {
 
     private final StudentDao dao;
